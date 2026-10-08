@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tibet Derebağ · Yazılım Geliştirici</title>
+<meta name="description" content="Tibet Derebağ: İzmir'de Yazılım Mühendisliği öğrencisi ve full-stack geliştirici.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --bg:#eef4f3; --ink:#0e2a3a; --muted:#4a6472; --line:#c5d6d6; --aegean:#0f6e8c; --sun:#e9a92f; --card:#ffffff;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#08202c;--ink:#e6f1f0;--muted:#9bb5bd;--line:#1d4152;--aegean:#5fc3df;--sun:#f2c05a;--card:#0d2b3a}
+}
+:root[data-theme="dark"]{--bg:#08202c;--ink:#e6f1f0;--muted:#9bb5bd;--line:#1d4152;--aegean:#5fc3df;--sun:#f2c05a;--card:#0d2b3a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.65}
+a{color:var(--aegean);text-underline-offset:3px}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:4.5rem 0 4rem;border-bottom:1px solid var(--line)}
+.hero svg{position:absolute;right:-8%;top:-10%;width:70%;max-width:46rem;opacity:.5;pointer-events:none}
+.hero svg path{fill:none;stroke:var(--aegean);stroke-width:1.2;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s ease-out forwards}
+.hero svg path:nth-child(2){animation-delay:.3s;opacity:.7}
+.hero svg path:nth-child(3){animation-delay:.6s;opacity:.45}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .wrap{position:relative}
+h1{font-size:clamp(3.2rem,12vw,8.5rem);font-weight:800;letter-spacing:-.035em}
+.role{font-family:var(--display);font-size:clamp(1.2rem,3vw,1.7rem);font-weight:700;margin:1.2rem 0 .6rem;color:var(--aegean)}
+.lead{max-width:36rem;color:var(--muted);margin:0 0 1.8rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{font-family:var(--display);font-weight:700;font-size:1rem;text-decoration:none;padding:.7rem 1.2rem;border-radius:.4rem;border:2px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--sun);border-color:var(--sun);color:#0e2a3a}
+
+/* sections */
+section{padding:3.8rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-bottom:1.6rem}
+.two{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:760px){.two{grid-template-columns:1.4fr 1fr}}
+.facts{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.facts li{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.facts b{font-family:var(--display)}
+.facts span{color:var(--muted);text-align:right}
+
+/* projects */
+.proj{border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.1rem 0}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:clamp(1.3rem,3.4vw,1.8rem);font-weight:700}
+summary small{font-family:var(--display);color:var(--muted);font-size:.9rem;white-space:nowrap}
+summary::after{content:"+";font-family:var(--display);font-size:1.6rem;color:var(--aegean);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+.det{padding:0 0 1.4rem;max-width:44rem;color:var(--muted)}
+.det p{margin:0 0 .8rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.tags li{font-family:var(--display);font-size:.85rem;font-weight:700;padding:.15rem .6rem;border:1px solid var(--aegean);border-radius:99px;color:var(--aegean)}
+
+/* skills + more */
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin:0;padding:0;list-style:none}
+.chips li{font-family:var(--display);font-weight:700;background:var(--card);border:1px solid var(--line);padding:.4rem .9rem;border-radius:.4rem}
+.cols{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:760px){.cols{grid-template-columns:1fr 1fr}}
+h3.sub{font-size:1.25rem;margin-bottom:.9rem}
+.work{margin:0;padding:0;list-style:none}
+.work li{padding:.8rem 0;border-bottom:1px solid var(--line)}
+.work b{font-family:var(--display);display:block}
+.work span{color:var(--muted)}
+
+footer{padding:3.5rem 0 4rem}
+footer h2{font-size:clamp(2.2rem,7vw,4.2rem)}
+footer .links{display:flex;flex-wrap:wrap;gap:1.4rem;font-family:var(--display);font-weight:700;font-size:1.1rem;margin-top:1.4rem}
+footer p{color:var(--muted);margin:0}
+@media (prefers-reduced-motion:reduce){.hero svg path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}summary::after{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg viewBox="0 0 600 600" aria-hidden="true">
+    <path d="M40 420C90 300 190 330 260 250S420 120 560 170"/>
+    <path d="M30 480C120 380 200 410 290 330S440 210 580 260"/>
+    <path d="M20 540C140 460 220 490 320 410S470 300 590 350"/>
+  </svg>
+  <div class="wrap">
+    <h1>Tibet<br>Derebağ</h1>
+    <p class="role">Full-stack geliştirici, Yazılım Mühendisliği öğrencisi</p>
+    <p class="lead">İzmir'de, Yaşar Üniversitesi'nde okuyorum. Web arayüzleri, Java uygulamaları, veritabanı tabanlı sistemler ve test otomasyonu geliştiriyorum. Önce çalışan bir şey çıkarır, sonra hızla iyileştiririm.</p>
+    <div class="btns">
+      <a class="btn main" href="#projeler">Projelerime bak</a>
+      <a class="btn" href="mailto:derebagtibet04@gmail.com">E-posta gönder</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="hakkimda">
+  <div class="wrap two">
+    <div>
+      <h2>Hakkımda</h2>
+      <p>Okulda öğrendiklerimi, denemelerimi ve ürün fikirlerimi GitHub'da gerçek, incelenebilir koda dönüştürüyorum. Çalışma tarzım pratik, görsel ve düzenli; kullanıcıyı merkeze alıyorum.</p>
+      <p>Backend'den mobil uygulamaya, arayüzden test otomasyonuna kadar yazılımın farklı katmanlarında çalıştım. Dört dil konuşuyorum; bu da farklı ülkelerden ekiplerle rahatça çalışmamı sağlıyor.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Okul</b><span>Yaşar Üniversitesi, Yazılım Mühendisliği</span></li>
+      <li><b>Konum</b><span>İzmir, Türkiye</span></li>
+      <li><b>Diller</b><span>Türkçe, İngilizce, Fransızca, Almanca</span></li>
+      <li><b>Odak</b><span>TypeScript, Java, arayüz, test, veritabanı</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="projeler">
+  <div class="wrap">
+    <h2>Projeler</h2>
+    <div class="proj">
+      <details open>
+        <summary><h3>StuMap</h3><small>Full-stack</small></summary>
+        <div class="det">
+          <p>Yapay zekâ destekli bir kariyer eşleştirme platformu. Öğrenci odaklı harita ve dijital deneyim yaklaşımıyla geliştirdim; StuMap'te full-stack geliştirici olarak çalışıyorum.</p>
+          <ul class="tags"><li>TypeScript</li><li>Full-stack</li><li>Yapay zekâ</li></ul>
+          <p style="margin-top:.8rem"><a href="https://github.com/derebagtibet/StuMapWebsite">GitHub'da incele</a></p>
+        </div>
+      </details>
+      <details>
+        <summary><h3>CityLore</h3><small>Full-stack</small></summary>
+        <div class="det">
+          <p>Türkiye için harita tabanlı kültürel keşif platformu. Şehirlerin hikâyelerini harita üzerinden keşfetmeyi sağlıyor.</p>
+          <ul class="tags"><li>Full-stack</li><li>Harita</li></ul>
+          <p style="margin-top:.8rem"><a href="https://github.com/derebagtibet/CityLore">GitHub'da incele</a></p>
+        </div>
+      </details>
+      <details>
+        <summary><h3>GamePlayer</h3><small>Mobil</small></summary>
+        <div class="det">
+          <p>Android için sosyal bir spor uygulaması. Web arayüzü ile uygulama mantığını bir araya getiren, etkileşimli bir proje.</p>
+          <ul class="tags"><li>TypeScript</li><li>Android</li></ul>
+          <p style="margin-top:.8rem"><a href="https://github.com/derebagtibet/GamePlayer">GitHub'da incele</a></p>
+        </div>
+      </details>
+      <details>
+        <summary><h3>Trendyol Test Otomasyonu</h3><small>Test</small></summary>
+        <div class="det">
+          <p>Gerçek iş akışlarını doğrulayan test senaryoları. Selenium, Java ve Page Object Model (POM) yapısıyla kurdum.</p>
+          <ul class="tags"><li>Selenium</li><li>Java</li><li>POM</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary><h3>Migros Ürün Sistemi</h3><small>Java</small></summary>
+        <div class="det">
+          <p>Temiz, backend odaklı bir proje yapısına sahip Java ürün yönetim sistemi.</p>
+          <ul class="tags"><li>Java</li><li>Backend</li></ul>
+          <p style="margin-top:.8rem"><a href="https://github.com/derebagtibet/Migros-ProductSystem">GitHub'da incele</a></p>
+        </div>
+      </details>
+      <details>
+        <summary><h3>Verpol</h3><small>Web</small></summary>
+        <div class="det">
+          <p>Var olan bir web sitesinin daha gelişmiş, daha düzenli ve daha kapsamlı bir sürümü; bireysel projem.</p>
+          <ul class="tags"><li>HTML</li><li>Web</li></ul>
+          <p style="margin-top:.8rem"><a href="https://github.com/derebagtibet/Verpol">GitHub'da incele</a></p>
+        </div>
+      </details>
+    </div>
+    <p style="margin-top:1.4rem;color:var(--muted)">Daha fazlası için <a href="https://github.com/derebagtibet?tab=repositories">tüm depolarıma</a> göz atabilirsin.</p>
+  </div>
+</section>
+
+<section id="yetenekler">
+  <div class="wrap cols">
+    <div>
+      <h2>Teknolojiler</h2>
+      <ul class="chips">
+        <li>Java</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>C</li><li>C++</li><li>C#</li><li>PHP</li><li>HTML</li><li>CSS</li><li>React Native</li><li>Flutter</li><li>Selenium</li><li>Docker</li><li>Git</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Deneyim</h2>
+      <ul class="work">
+        <li><b>Full-stack geliştirici, StuMap</b><span>Yapay zekâ destekli kariyer eşleştirme platformu</span></li>
+        <li><b>Backend stajyeri, Migros Ticaret A.Ş.</b><span>Backend geliştirme stajı</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Birlikte bir şey yapalım.</h2>
+    <p>Staj, proje ya da sohbet için yazabilirsin.</p>
+    <div class="links">
+      <a href="mailto:derebagtibet04@gmail.com">derebagtibet04@gmail.com</a>
+      <a href="https://github.com/derebagtibet">GitHub</a>
+      <a href="https://www.linkedin.com/in/tibet-dereba%C4%9F-7b44a528a/">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
