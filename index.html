@@ -44,6 +44,17 @@ h1{font-size:clamp(3.2rem,12vw,8.5rem);font-weight:800;letter-spacing:-.035em}
 .btn.main{background:var(--ink);color:var(--bg)}
 .btn:hover{background:var(--sun);border-color:var(--sun);color:#0e2a3a}
 
+
+/* hero portrait */
+.hero-grid{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+.hero-photo{margin:0;justify-self:start;width:min(12rem,52vw)}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;border-radius:50%;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--sun);background:var(--card)}
+@media(min-width:820px){
+  .hero-grid{grid-template-columns:1fr auto;gap:3rem}
+  .hero-photo{grid-column:2;grid-row:1;justify-self:end;width:17rem}
+  .hero-text{grid-column:1;grid-row:1}
+}
+
 /* sections */
 section{padding:3.8rem 0;border-bottom:1px solid var(--line)}
 h2{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-bottom:1.6rem}
@@ -94,13 +105,18 @@ footer p{color:var(--muted);margin:0}
     <path d="M30 480C120 380 200 410 290 330S440 210 580 260"/>
     <path d="M20 540C140 460 220 490 320 410S470 300 590 350"/>
   </svg>
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <figure class="hero-photo">
+      <img src="tibet.jpg" width="800" height="1000" alt="Tibet Derebağ, sahilde gülümseyen bir portre" decoding="async" fetchpriority="high">
+    </figure>
+    <div class="hero-text">
     <h1>Tibet<br>Derebağ</h1>
     <p class="role">Full-stack geliştirici, Yazılım Mühendisliği öğrencisi</p>
     <p class="lead">İzmir'de, Yaşar Üniversitesi'nde okuyorum. Web arayüzleri, Java uygulamaları, veritabanı tabanlı sistemler ve test otomasyonu geliştiriyorum. Önce çalışan bir şey çıkarır, sonra hızla iyileştiririm.</p>
     <div class="btns">
       <a class="btn main" href="#projeler">Projelerime bak</a>
       <a class="btn" href="mailto:derebagtibet04@gmail.com">E-posta gönder</a>
+    </div>
     </div>
   </div>
 </header>
